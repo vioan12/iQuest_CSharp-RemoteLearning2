@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Problem03
 {
-    public class Program
+    public class Square
     {
-        public static void Main(string[] args)
+
+        public Square()
         {
+
         }
     }
 }
