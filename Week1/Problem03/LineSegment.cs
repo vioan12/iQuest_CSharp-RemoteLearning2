@@ -8,14 +8,12 @@ namespace Problem03
 {
     public class LineSegment
     {
-        public Point[] points { get; private set; }
-        public LineSegment(Point point1, Point point2)
+        public decimal size { get; private set; }
+        public LineSegment(decimal size)
         {
-            points = new Point[2];
-            if(!point1.IsEqual(point2))
+            if(size > 0)
             {
-                points[0] = point1;
-                points[1] = point2;
+                this.size = size;
             }
             else
             {
@@ -24,51 +22,13 @@ namespace Problem03
         }
         public bool IsEqual(LineSegment lineSegment)
         {
-            if ((points[0].IsEqual(lineSegment.points[0]) && points[1].IsEqual(lineSegment.points[1]))
-                || (points[0].IsEqual(lineSegment.points[1]) && points[1].IsEqual(lineSegment.points[0])))
+            if(size == lineSegment.size)
             {
                 return true;
             }
             else
             {
                 return false;
-            }
-        }
-        public double Length()
-        {
-            return Math.Sqrt(Math.Pow((points[0].abscissa - points[1].abscissa) , 2) + Math.Pow((points[0].ordinate - points[1].ordinate) , 2));
-        }
-        public Point CommonPoint(LineSegment lineSegment)
-        {
-            if (points[0].IsEqual(lineSegment.points[0]) || points[1].IsEqual(lineSegment.points[1])
-                || points[0].IsEqual(lineSegment.points[1]) || points[1].IsEqual(lineSegment.points[0]))
-            {
-                Point point = new Point();
-                if (points[0].IsEqual(lineSegment.points[0]))
-                {
-                    point.abscissa = points[0].abscissa;
-                    point.ordinate = points[0].ordinate;
-                }
-                if(points[1].IsEqual(lineSegment.points[1]))
-                {
-                    point.abscissa = points[1].abscissa;
-                    point.ordinate = points[1].ordinate;
-                }
-                if(points[0].IsEqual(lineSegment.points[1]))
-                {
-                    point.abscissa = points[0].abscissa;
-                    point.ordinate = points[0].ordinate;
-                }
-                if(points[1].IsEqual(lineSegment.points[0]))
-                {
-                    point.abscissa = points[1].abscissa;
-                    point.ordinate = points[1].ordinate;
-                }
-                return point;
-            }
-            else
-            {
-                throw new Exception("They do not have a common point");
             }
         }
     }
