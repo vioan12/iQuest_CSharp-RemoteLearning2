@@ -21,8 +21,8 @@ namespace Problem02
                 using (System.IO.StreamReader inputFile = new System.IO.StreamReader(fileName))
                 {
                     string line;
-                    inputFile.BaseStream.Seek(Constants.firstInteger.ToString().Length + 2, System.IO.SeekOrigin.Begin);
-                    inputFile.BaseStream.Seek(Constants.secondInteger.ToString().Length + 2, System.IO.SeekOrigin.Current);
+                    inputFile.BaseStream.Seek(Constants.FirstInteger.ToString().Length + 2, System.IO.SeekOrigin.Begin);
+                    inputFile.BaseStream.Seek(Constants.SecondInteger.ToString().Length + 2, System.IO.SeekOrigin.Current);
                     while ((line = inputFile.ReadLine()) != null)
                     {
                         text.Add(line);

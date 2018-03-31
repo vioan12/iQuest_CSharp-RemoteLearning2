@@ -12,13 +12,13 @@ namespace Problem02
         private static ReadFile readFile;
         public static void Main(string[] args)
         {
-            writeFile = new WriteFile(Constants.fileName);
-            readFile = new ReadFile(Constants.fileName);
+            writeFile = new WriteFile(Constants.FileName);
+            readFile = new ReadFile(Constants.FileName);
             List<string> text = new List<string>();
-            text.Add(Constants.firstInteger.ToString());
-            text.Add(Constants.secondInteger.ToString());
-            text.Add(Constants.thirdInteger.ToString());
-            text.Add(Constants.fourthInteger.ToString());
+            text.Add(Constants.FirstInteger.ToString());
+            text.Add(Constants.SecondInteger.ToString());
+            text.Add(Constants.ThirdInteger.ToString());
+            text.Add(Constants.FourthInteger.ToString());
             try
             {
                 writeFile.Write(text);
