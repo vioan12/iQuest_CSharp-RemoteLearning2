@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace Problem01
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static Tank tank;
+        public static void Main(string[] args)
         {
+            tank = new Tank(3);
+            tank.Add(8);
+            tank.Add(7);
+            tank.Remove();
+            tank.Add(3);
+            tank.Dispose();
+            tank.Add(11);
+            tank.Add(15);
         }
     }
 }
