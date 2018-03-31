@@ -18,27 +18,27 @@ namespace Problem01
         }
         public bool Add(Object item)
         {
-            if(numberOfItems < stack.Length)
+            if (!disposed)
             {
-                stack[numberOfItems++] = item;
-                return true;
+                if (numberOfItems < stack.Length)
+                {
+                    stack[numberOfItems++] = item;
+                    return true;
+                }
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
         public bool Remove()
         {
-            if (numberOfItems > 0)
+            if (!disposed)
             {
-                stack[--numberOfItems] = null;
-                return true;
+                if (numberOfItems > 0)
+                {
+                    stack[--numberOfItems] = null;
+                    return true;
+                }
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
         public void Dispose()
         {

@@ -19,6 +19,10 @@ namespace Problem01
             tank.Dispose();
             tank.Add(11);
             tank.Add(15);
+            tank.Dispose();
+            tank.Remove();
+            tank.Add(15);
+            tank.Remove();
         }
     }
 }
