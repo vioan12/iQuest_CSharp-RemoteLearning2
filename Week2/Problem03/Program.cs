@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Problem03
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static Compression compression;
+        public static void Main(string[] args)
         {
+            compression = new Compression();
+            compression.Compress(Constants.SourceFileName);
         }
     }
 }
