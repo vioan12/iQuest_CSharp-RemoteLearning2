@@ -43,11 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomersCollection.cs" />
+    <Compile Include="Hotel.cs" />
+    <Compile Include="HotelManager.cs" />
+    <Compile Include="ICustomersCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadFiles.cs" />
+    <Compile Include="Reservation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="Customers.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reservations.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

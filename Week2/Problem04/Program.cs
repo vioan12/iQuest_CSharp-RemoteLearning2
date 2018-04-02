@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Problem04
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static ReadFiles readFile;
+        private static CustomersCollection customersCollection;
+        public static void Main(string[] args)
         {
+            customersCollection = new CustomersCollection();
+            readFile = new ReadFiles(Constants.FileNameCustomersDetails, Constants.FileNameReservationsDetails, customersCollection);
+            readFile.Read();
         }
     }
 }
