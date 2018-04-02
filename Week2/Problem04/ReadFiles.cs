@@ -50,7 +50,7 @@ namespace Problem04
                             address = address + line.ElementAt(i);
                             i++;
                         }
-                        Customer customer = new Customer(name, username, password, address);
+                        Customer customer = new Customer(name, username, EncryptionDecryption.DecryptPassword(password), address);
                         iCustomersCollection.AddCustomer(customer);
                     }
                 }

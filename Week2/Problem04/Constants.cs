@@ -10,5 +10,6 @@ namespace Problem04
     {
         public const string FileNameCustomersDetails = "Customers.csv";
         public const string FileNameReservationsDetails = "Reservations.csv";
+        public const string Key = "Ioan";
     }
 }
