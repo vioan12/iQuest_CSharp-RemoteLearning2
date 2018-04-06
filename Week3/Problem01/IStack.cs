@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week2
+namespace Problem01
 {
-    class Program
+    public interface IStack<T>
     {
-        static void Main(string[] args)
-        {
-        }
+        bool Push(T newItem);
+        bool Pop();
+        T Peek();
     }
 }

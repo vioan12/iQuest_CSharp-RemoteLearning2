@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week1
+namespace Problem01
 {
-    class Program
+    public class Node<T>
     {
-        static void Main(string[] args)
-        {
-        }
+        public Node<T> Previous { get; set; }
+        public T Data { get; set; }
     }
 }
