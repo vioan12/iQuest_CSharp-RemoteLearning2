@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Converter.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomersCollection.cs" />
     <Compile Include="EncryptionDecryption.cs" />
@@ -52,8 +53,9 @@
     <Compile Include="ICustomersCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadFiles.cs" />
+    <Compile Include="ReadFile.cs" />
     <Compile Include="Reservation.cs" />
+    <Compile Include="UsernameReservation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
