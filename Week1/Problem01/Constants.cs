@@ -8,6 +8,6 @@ namespace Problem01
 {
     public static class Constants
     {
-        public static readonly string fileName = "file.csv";
+        public static readonly string FileName = "file.csv";
     }
 }
