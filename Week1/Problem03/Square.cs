@@ -8,7 +8,7 @@ namespace Problem03
 {
     public class Square : RegularQuadrilateral
     {
-        public decimal length { get; private set; }
+        public decimal Length { get; private set; }
         public Square(LineSegment lengthLineSegment1, LineSegment lengthLineSegment2, LineSegment lengthLineSegment3, LineSegment lengthLineSegment4) : base(lengthLineSegment1, lengthLineSegment2, lengthLineSegment3, lengthLineSegment4)
         {
             if (!(lengthLineSegment1.IsEqual(lengthLineSegment2) &&
@@ -22,12 +22,12 @@ namespace Problem03
             }
             else
             {
-                length = lengthLineSegment1.size;
+                Length = lengthLineSegment1.Size;
             }
         }
         public override decimal Area()
         {
-            return length * length;
+            return Length * Length;
         }
     }
 }

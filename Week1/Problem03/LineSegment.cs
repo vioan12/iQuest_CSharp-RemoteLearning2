@@ -8,12 +8,12 @@ namespace Problem03
 {
     public class LineSegment
     {
-        public decimal size { get; private set; }
+        public decimal Size { get; private set; }
         public LineSegment(decimal size)
         {
             if(size > 0)
             {
-                this.size = size;
+                Size = size;
             }
             else
             {
@@ -22,7 +22,7 @@ namespace Problem03
         }
         public bool IsEqual(LineSegment lineSegment)
         {
-            if(size == lineSegment.size)
+            if(Size == lineSegment.Size)
             {
                 return true;
             }
