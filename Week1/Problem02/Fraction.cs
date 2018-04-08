@@ -8,8 +8,14 @@ namespace Problem02
 {
     public class Fraction
     {
-        public ulong numerator { get; set; }
-        public ulong denominator { get; set; }
-        public bool positiveSign { get; set; }
+        public ulong Numerator { get; private set; }
+        public ulong Denominator { get; private set; }
+        public bool PositiveSign { get; private set; }
+        public Fraction(ulong numerator, ulong denominator, bool positiveSign)
+        {
+            Numerator = numerator;
+            Denominator = denominator;
+            PositiveSign = positiveSign;
+        }
     }
 }

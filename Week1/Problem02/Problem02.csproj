@@ -46,6 +46,7 @@
     <Compile Include="ComputePI.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Fraction.cs" />
+    <Compile Include="ComparePI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
