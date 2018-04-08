@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Problem04
 {
-    public class PrimeNumber
+    public class PrimeNumberVerifier
     {
-        public PrimeNumber()
+        public PrimeNumberVerifier()
         {
         }
         public bool IsPrime(int number)

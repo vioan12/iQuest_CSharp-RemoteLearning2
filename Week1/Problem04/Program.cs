@@ -8,7 +8,7 @@ namespace Problem04
 {
     public class Program
     {
-        private static PrimeNumber primeNumber;
+        private static PrimeNumberVerifier primeNumberVerifier;
         public static int Main(string[] args)
         {
             int maximumNumber;
@@ -23,11 +23,11 @@ namespace Problem04
                 System.Console.WriteLine("Please enter a correct numeric argument.");
                 return 1;
             }
-            primeNumber = new PrimeNumber();
+            primeNumberVerifier = new PrimeNumberVerifier();
             System.Console.Write("1");
             for (int i = 2; i <= maximumNumber; i++)
             {
-                if (primeNumber.IsPrime(i))
+                if (primeNumberVerifier.IsPrime(i))
                 {
                     System.Console.Write(", " + i + "-PRIME");
                 }
