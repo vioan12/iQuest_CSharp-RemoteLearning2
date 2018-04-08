@@ -6,26 +6,38 @@ using System.Threading.Tasks;
 
 namespace Problem05
 {
-    public class Registrar : Subject, IObserver
+    public class Registrar
     {
-        public List<Domain> createdDomains { get; private set; }
         public Registrar()
         {
-            createdDomains = new List<Domain>();
         }
-        private void CreateNewDomain(Domain domain)
+        protected Domain CreateNewDomain(string name, string hosts, string ownerDetails)
         {
-            foreach (Domain element in createdDomains)
+            Domain newDomain = new Domain(name, hosts, ownerDetails);
+            return newDomain;
+        }
+        public class Domain
+        {
+            public string Name { get; private set; }
+            public string Hosts { get; private set; }
+            public string OwnerDetails { get; private set; }
+            public Domain(string name, string hosts, string ownerDetails)
             {
-                if (element.IsEquals(domain))
-                    throw new Exception("Domain already exists!!!");
+                Name = name;
+                Hosts = hosts;
+                OwnerDetails = ownerDetails;
             }
-            createdDomains.Add(domain);
-        }
-        public void Update(Domain domain)
-        {
-            CreateNewDomain(domain);
-            Notify(domain);
+            public bool IsEqualsNameHosts(string name, string hosts)
+            {
+                if (Name == name)
+                {
+                    if (Hosts == hosts)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
         }
     }
 }

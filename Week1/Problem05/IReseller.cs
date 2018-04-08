@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Problem05
 {
-    public interface IObserver
+    public interface IReseller
     {
-        void Update(Domain domain);
+        bool CreateNewDomain(string name, string hosts, string ownerDetails);
     }
 }
