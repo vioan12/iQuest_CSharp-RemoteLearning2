@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Problem06
 {
-    public class Connection
+    public static class Constants
     {
-        public int id { get; private set; }
-        protected Connection(int id)
-        {
-            this.id = id;
-        }
+        public static readonly string ClientFileName = "Client.csv";
     }
 }
