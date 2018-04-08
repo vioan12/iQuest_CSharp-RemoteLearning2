@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Problem04
 {
-    public class ReadFile
+    public class ReadFile : IRead
     {
         private string fileName;
         public ReadFile(string fileName)

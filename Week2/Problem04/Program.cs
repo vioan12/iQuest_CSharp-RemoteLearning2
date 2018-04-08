@@ -9,16 +9,20 @@ namespace Problem04
     public class Program
     {
         private static CustomersCollection customersCollection;
+        private static IRepository<Customer> customerRepository;
+        private static IRepository<UsernameReservation> reservationRepository;
         public static void Main(string[] args)
         {
             customersCollection = new CustomersCollection();
+            customerRepository = new CustomerRepository(customersCollection);
+            reservationRepository = new ReservationRepository(customersCollection);
             try
             {
                 List<string> customersFileLines, reservationsFileLines;
                 List<Customer> customersList;
                 List<UsernameReservation> usernameReservationsList;
                 Converter converter = new Converter();
-                ReadFile readFile;
+                IRead readFile;
                 readFile = new ReadFile(Constants.FileNameCustomersDetails);
                 customersFileLines = readFile.Read();
                 readFile = new ReadFile(Constants.FileNameReservationsDetails);
@@ -27,11 +31,11 @@ namespace Problem04
                 usernameReservationsList = converter.ConvertReservationsFile(reservationsFileLines);
                 foreach (Customer customer in customersList)
                 {
-                    customersCollection.AddCustomer(customer);
+                    customerRepository.Add(customer);
                 }
                 foreach (UsernameReservation usernameAndReservation in usernameReservationsList)
                 {
-                    customersCollection.FindByUsername(usernameAndReservation.Username).AddReservation(usernameAndReservation.Reservation);
+                    reservationRepository.Add(usernameAndReservation);
                 }
             }
             catch (Exception exception)
