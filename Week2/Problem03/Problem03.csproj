@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Compression.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="FileLength.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
