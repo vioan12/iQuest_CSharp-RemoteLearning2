@@ -10,13 +10,15 @@ namespace Problem05
     {
         private static Customer customer;
         private static IReseller reseller;
+        private static IRegistrar registrar;
         public static void Main(string[] args)
         {
             ReadFile readFile = new ReadFile(Constants.CustomerFileName);
             ConverterCustomer converterCustomer = new ConverterCustomer();
             ConverterDomain converterDomain = new ConverterDomain();
             customer = converterCustomer.Convert(readFile.Read()).ElementAt(0);
-            reseller = new Reseller();
+            registrar = new Registrar();
+            reseller = new Reseller(registrar);
             readFile = new ReadFile(Constants.DomainFileName);
             List<TwoStrings> domains;
             domains = converterDomain.Convert(readFile.Read());

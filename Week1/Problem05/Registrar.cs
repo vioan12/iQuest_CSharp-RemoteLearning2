@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Problem05
 {
-    public class Registrar
+    public class Registrar : IRegistrar
     {
         public Registrar()
         {
         }
-        protected Domain CreateNewDomain(string name, string hosts, string ownerDetails)
+        public Domain CreateNewDomain(string name, string hosts, string ownerDetails)
         {
             Domain newDomain = new Domain(name, hosts, ownerDetails);
             return newDomain;

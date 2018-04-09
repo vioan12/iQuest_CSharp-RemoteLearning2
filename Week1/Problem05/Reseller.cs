@@ -6,24 +6,26 @@ using System.Threading.Tasks;
 
 namespace Problem05
 {
-    public class Reseller : Registrar, IReseller
+    public class Reseller : IReseller
     {
-        public List<Domain> CreatedDomains { get; private set; }
-        public Reseller()
+        public List<Registrar.Domain> CreatedDomains { get; private set; }
+        private IRegistrar registrar { get; set; }
+        public Reseller(IRegistrar registrar)
         {
-            CreatedDomains = new List<Domain>();
+            CreatedDomains = new List<Registrar.Domain>();
+            this.registrar = registrar;
         }
-        public new bool CreateNewDomain(string name, string hosts, string ownerDetails)
+        public bool CreateNewDomain(string name, string hosts, string ownerDetails)
         {
-            Domain newDomain;
-            foreach (Domain domain in CreatedDomains)
+            Registrar.Domain newDomain;
+            foreach (Registrar.Domain domain in CreatedDomains)
             {
                 if (domain.IsEqualsNameHosts(name, hosts))
                 {
                     return false;
                 }
             }
-            newDomain = base.CreateNewDomain(name, hosts, ownerDetails);
+            newDomain = registrar.CreateNewDomain(name, hosts, ownerDetails);
             CreatedDomains.Add(newDomain);
             return true;
         }

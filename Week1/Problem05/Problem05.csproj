@@ -49,6 +49,7 @@
     <Compile Include="ConverterCustomer.cs" />
     <Compile Include="ConverterDomain.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="IRegistrar.cs" />
     <Compile Include="IReseller.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
