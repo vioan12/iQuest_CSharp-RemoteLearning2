@@ -7,8 +7,8 @@
     <ProjectGuid>{8BFBFE18-C87C-490D-8801-4BE99507BD25}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Problem04</RootNamespace>
-    <AssemblyName>Problem04</AssemblyName>
+    <RootNamespace>ProblemCustomerReservation</RootNamespace>
+    <AssemblyName>ProblemCustomerReservation</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

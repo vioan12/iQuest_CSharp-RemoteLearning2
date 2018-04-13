@@ -1,28 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Problem04.Customer">
+  <Class Name="ProblemCustomerReservation.Customer">
     <Position X="0.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAEAAAAAQAAABQAAAAAAAACAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAIAAAAgAAEAAAAAQAAABQAAAAAAAACAAAAAgAAAAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Problem04.CustomersCollection">
+  <Class Name="ProblemCustomerReservation.CustomersCollection">
     <Position X="2.75" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAIgAAAAAAAAIQAAAAAAACAIAAAAAAAAAAADAAA=</HashCode>
       <FileName>CustomersCollection.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Problem04.Hotel">
+  <Class Name="ProblemCustomerReservation.Hotel">
     <Position X="5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Hotel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Problem04.Reservation">
+  <Class Name="ProblemCustomerReservation.Reservation">
     <Position X="7.25" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAEA=</HashCode>
