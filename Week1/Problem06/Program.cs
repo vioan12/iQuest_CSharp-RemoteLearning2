@@ -12,49 +12,37 @@ namespace Problem06
         private static Client client;
         public static void Main(string[] args)
         {
+            ReadFile readFile = new ReadFile(Constants.ClientFileName);
+            ClientConverter clientConverter = new ClientConverter();
+            client = clientConverter.Convert(readFile.Read()).ElementAt(0);
             connectionManager = new ConnectionManager(3);
-            Connection connection;
-            client = new Client("Dan", "Florea", "015714", "dandan2@gmail.com");
+            ConnectionManager.Connection connection;
             try
             {
                 connection = connectionManager.ConnectionRequest(20);
-                System.Console.WriteLine(connection.id);
-            }
-            catch (Exception exception)
-            {
-                System.Console.WriteLine(exception.Message);
-            }
-            try
-            {
+                System.Console.WriteLine(connection.Id);
                 connection = connectionManager.ConnectionRequest(1000);
-                System.Console.WriteLine(connection.id);
-            }
-            catch (Exception exception)
-            {
-                System.Console.WriteLine(exception.Message);
-            }
-            try
-            {
+                System.Console.WriteLine(connection.Id);
                 connection = connectionManager.ConnectionRequest(50);
-                System.Console.WriteLine(connection.id);
-            }
-            catch (Exception exception)
-            {
-                System.Console.WriteLine(exception.Message);
-            }
-            try
-            {
+                System.Console.WriteLine(connection.Id);
                 connection = connectionManager.ConnectionRequest(550);
-                System.Console.WriteLine(connection.id);
-            }
-            catch (Exception exception)
-            {
-                System.Console.WriteLine(exception.Message);
-            }
-            try
-            {
+                if (connection != null)
+                {
+                    System.Console.WriteLine(connection.Id);
+                }
+                else
+                {
+                    System.Console.WriteLine("null");
+                }
                 connection = connectionManager.ConnectionRequest(848);
-                System.Console.WriteLine(connection.id);
+                if (connection != null)
+                {
+                    System.Console.WriteLine(connection.Id);
+                }
+                else
+                {
+                    System.Console.WriteLine("null");
+                }
             }
             catch (Exception exception)
             {

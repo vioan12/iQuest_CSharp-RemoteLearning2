@@ -16,7 +16,7 @@ namespace Problem01
             personsCollection = new PersonsCollection();
             List<Person> personsList = new List<Person>();
             List<string> allFileLines = new List<string>();
-            readFile = new ReadFile(Constants.fileName);
+            readFile = new ReadFile(Constants.FileName);
             converter = new Converter();
             try
             {
@@ -40,10 +40,10 @@ namespace Problem01
             }
             for(int i = 0; i < personsCollection.Count(); i++)
             {
-                System.Console.WriteLine(personsCollection.GetItem(i).firstName + " "
-                    + personsCollection.GetItem(i).lastName + " ("
-                    + personsCollection.GetItem(i).dateOfBirth + "-"
-                    + personsCollection.GetItem(i).dateOfDead + ")");
+                System.Console.WriteLine(personsCollection.GetItem(i).FirstName + " "
+                    + personsCollection.GetItem(i).LastName + " ("
+                    + personsCollection.GetItem(i).DateOfBirth + "-"
+                    + personsCollection.GetItem(i).DateOfDead + ")");
             }
         }
     }

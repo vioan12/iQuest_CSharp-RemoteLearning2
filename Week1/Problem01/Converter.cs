@@ -23,38 +23,18 @@ namespace Problem01
         private Person ConvertOneLine(string line)
         {
             string firstName, lastName, dateOfBirth, dateOfDead;
-            Person person = new Person();
+            string[] splitLine;
+            Person person;
             firstName = lastName = dateOfBirth = dateOfDead = "";
-            int i = 0;
+            splitLine = line.Split(';');
+            firstName = splitLine[0];
+            lastName = splitLine[1];
+            dateOfBirth = splitLine[2];
+            if(splitLine.Length == 4)
             {
-                while (!line.ElementAt(i).Equals(';'))
-                {
-                    firstName = firstName + line.ElementAt(i);
-                    i++;
-                }
-                i++;
-                while (!line.ElementAt(i).Equals(';'))
-                {
-                    lastName = lastName + line.ElementAt(i);
-                    i++;
-                }
-                i++;
-                while (!line.ElementAt(i).Equals(';'))
-                {
-                    dateOfBirth = dateOfBirth + line.ElementAt(i);
-                    i++;
-                }
-                i++;
-                while (i < line.Count())
-                {
-                    dateOfDead = dateOfDead + line.ElementAt(i);
-                    i++;
-                }
+                dateOfDead = splitLine[3];
             }
-            person.firstName = firstName;
-            person.lastName = lastName;
-            person.dateOfBirth = dateOfBirth;
-            person.dateOfDead = dateOfDead;
+            person = new Person(firstName, lastName, dateOfBirth, dateOfDead);
             return person;
         }
     }

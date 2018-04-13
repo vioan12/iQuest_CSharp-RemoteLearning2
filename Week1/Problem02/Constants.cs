@@ -8,6 +8,6 @@ namespace Problem02
 {
     public static class Constants
     {
-        public const int max = 1000000000;
+        public const int Maximum = 100000000;
     }
 }

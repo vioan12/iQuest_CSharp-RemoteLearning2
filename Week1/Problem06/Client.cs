@@ -8,16 +8,16 @@ namespace Problem06
 {
     public class Client
     {
-        public string firstName { get; private set; }
-        public string lastName { get; private set; }
-        public string phoneNumber { get; private set; }
-        public string emailAddress { get; private set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
+        public string PhoneNumber { get; private set; }
+        public string EmailAddress { get; private set; }
         public Client(string firstName, string lastName, string phoneNumber, string emailAddress)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.phoneNumber = phoneNumber;
-            this.emailAddress = emailAddress;
+            FirstName = firstName;
+            LastName = lastName;
+            PhoneNumber = phoneNumber;
+            EmailAddress = emailAddress;
         }
     }
 }

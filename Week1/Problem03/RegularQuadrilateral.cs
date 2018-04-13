@@ -8,18 +8,18 @@ namespace Problem03
 {
     public abstract class RegularQuadrilateral
     {
-        public LineSegment[] lineSegmentsList { get; private set; }
+        public LineSegment[] LineSegmentsList { get; private set; }
         public RegularQuadrilateral(LineSegment lengthLineSegment1, LineSegment lengthLineSegment2, LineSegment lengthLineSegment3, LineSegment lengthLineSegment4)
         {
-            lineSegmentsList = new LineSegment[4];
-            lineSegmentsList[0] = lengthLineSegment1;
-            lineSegmentsList[1] = lengthLineSegment2;
-            lineSegmentsList[2] = lengthLineSegment3;
-            lineSegmentsList[3] = lengthLineSegment4;
+            LineSegmentsList = new LineSegment[4];
+            LineSegmentsList[0] = lengthLineSegment1;
+            LineSegmentsList[1] = lengthLineSegment2;
+            LineSegmentsList[2] = lengthLineSegment3;
+            LineSegmentsList[3] = lengthLineSegment4;
         }
         public decimal Perimeter()
         {
-            return lineSegmentsList[0].size + lineSegmentsList[1].size + lineSegmentsList[2].size + lineSegmentsList[3].size;
+            return LineSegmentsList[0].Size + LineSegmentsList[1].Size + LineSegmentsList[2].Size + LineSegmentsList[3].Size;
         }
         public abstract decimal Area();
     }

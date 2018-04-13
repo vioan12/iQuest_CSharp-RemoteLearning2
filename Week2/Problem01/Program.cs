@@ -16,13 +16,46 @@ namespace Problem01
             tank.Add(7);
             tank.Remove();
             tank.Add(3);
-            tank.Dispose();
+            try
+            {
+                tank.Dispose();
+            }
+            catch(Exception exception)
+            {
+                System.Console.WriteLine(exception.Message);
+            }
             tank.Add(11);
             tank.Add(15);
-            tank.Dispose();
+            try
+            {
+                tank.Dispose();
+            }
+            catch (Exception exception)
+            {
+                System.Console.WriteLine(exception.Message);
+            }
             tank.Remove();
-            tank.Add(15);
             tank.Remove();
+            tank.Remove();
+            tank.Remove();
+            tank.Remove();
+            try
+            {
+                tank.Dispose();
+            }
+            catch (Exception exception)
+            {
+                System.Console.WriteLine(exception.Message);
+            }
+            try
+            {
+                tank.Add(15);
+                tank.Remove();
+            }
+            catch (Exception exception)
+            {
+                System.Console.WriteLine(exception.Message);
+            }
         }
     }
 }

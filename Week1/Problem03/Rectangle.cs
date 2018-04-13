@@ -8,8 +8,8 @@ namespace Problem03
 {
     public class Rectangle : RegularQuadrilateral 
     {
-        public decimal length { get; private set; }
-        public decimal width { get; private set; }
+        public decimal Length { get; private set; }
+        public decimal Width { get; private set; }
         public Rectangle(LineSegment lengthLineSegment1, LineSegment lengthLineSegment2, LineSegment lengthLineSegment3, LineSegment lengthLineSegment4) : base(lengthLineSegment1, lengthLineSegment2, lengthLineSegment3, lengthLineSegment4)
         {
             if (!((lengthLineSegment1.IsEqual(lengthLineSegment2) && lengthLineSegment3.IsEqual(lengthLineSegment4)) ||
@@ -22,48 +22,48 @@ namespace Problem03
             {
                 if(lengthLineSegment1.IsEqual(lengthLineSegment2) && lengthLineSegment3.IsEqual(lengthLineSegment4))
                 {
-                    if(lengthLineSegment1.size > lengthLineSegment3.size)
+                    if(lengthLineSegment1.Size > lengthLineSegment3.Size)
                     {
-                        length = lengthLineSegment1.size;
-                        width = lengthLineSegment3.size;
+                        Length = lengthLineSegment1.Size;
+                        Width = lengthLineSegment3.Size;
                     }
                     else
                     {
-                        length = lengthLineSegment3.size;
-                        width = lengthLineSegment1.size;
+                        Length = lengthLineSegment3.Size;
+                        Width = lengthLineSegment1.Size;
                     }
                 }
                 if(lengthLineSegment1.IsEqual(lengthLineSegment3) && lengthLineSegment2.IsEqual(lengthLineSegment4))
                 {
-                    if (lengthLineSegment1.size > lengthLineSegment2.size)
+                    if (lengthLineSegment1.Size > lengthLineSegment2.Size)
                     {
-                        length = lengthLineSegment1.size;
-                        width = lengthLineSegment2.size;
+                        Length = lengthLineSegment1.Size;
+                        Width = lengthLineSegment2.Size;
                     }
                     else
                     {
-                        length = lengthLineSegment2.size;
-                        width = lengthLineSegment1.size;
+                        Length = lengthLineSegment2.Size;
+                        Width = lengthLineSegment1.Size;
                     }
                 }
                 if(lengthLineSegment1.IsEqual(lengthLineSegment4) && lengthLineSegment2.IsEqual(lengthLineSegment3))
                 {
-                    if (lengthLineSegment1.size > lengthLineSegment2.size)
+                    if (lengthLineSegment1.Size > lengthLineSegment2.Size)
                     {
-                        length = lengthLineSegment1.size;
-                        width = lengthLineSegment2.size;
+                        Length = lengthLineSegment1.Size;
+                        Width = lengthLineSegment2.Size;
                     }
                     else
                     {
-                        length = lengthLineSegment2.size;
-                        width = lengthLineSegment1.size;
+                        Length = lengthLineSegment2.Size;
+                        Width = lengthLineSegment1.Size;
                     }
                 }
             }
         }
         public override decimal Area()
         {
-            return length * width;
+            return Length * Width;
         }
     }
 }

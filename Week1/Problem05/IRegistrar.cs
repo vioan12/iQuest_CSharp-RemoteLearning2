@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Problem05
 {
-    public interface ISubject
+    public interface IRegistrar
     {
-        void Attach(IObserver observer);
-        void Detach(IObserver observer);
-        void Notify(Domain domain);
+        Registrar.Domain CreateNewDomain(string name, string hosts, string ownerDetails);
     }
 }

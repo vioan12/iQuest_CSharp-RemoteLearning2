@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Problem05
+namespace Problem01
 {
-    public interface IObserver
+    public interface IStack<T>
     {
-        void Update(Domain domain);
+        bool Push(T newItem);
+        bool Pop();
+        T Peek();
     }
 }

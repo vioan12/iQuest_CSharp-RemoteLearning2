@@ -18,11 +18,11 @@ namespace Problem02
         {
             double division;
             Fraction fraction;
-            for (int i = 0; i <= Constants.max; i++)
+            for (int i = 0; i <= Constants.Maximum; i++)
             {
                 fraction = NextTerm(i);
-                division = (double)fraction.numerator / (double)fraction.denominator;
-                if(!fraction.positiveSign)
+                division = (double)fraction.Numerator / (double)fraction.Denominator;
+                if(!fraction.PositiveSign)
                 {
                     division = division * (-1);
                 }
@@ -32,17 +32,17 @@ namespace Problem02
         }
         private Fraction NextTerm(int index)
         {
-            Fraction fraction = new Fraction();
-            fraction.numerator = 1;
-            fraction.denominator = 2 * (ulong)(index) + 1;
+            Fraction fraction;
+            bool sign;
             if (index % 2 == 0)
             {
-                fraction.positiveSign = true;
+                sign = true;
             }
             else
             {
-                fraction.positiveSign = false;
+                sign = false;
             }
+            fraction = new Fraction(1, 2 * (ulong)(index) + 1, sign);
             return fraction;
         }
     }

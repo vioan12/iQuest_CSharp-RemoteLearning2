@@ -48,5 +48,10 @@ namespace Problem04
             ReservationsList.Add(reservation);
             return true;
         }
+        public bool RemoveAllReservations()
+        {
+            ReservationsList = new List<Reservation>();
+            return true;
+        }
     }
 }

@@ -13,21 +13,22 @@ namespace Problem01
         {
             personsList = new List<Person>();
         }
-        public void Add(Person person)
+        public bool Add(Person person)
         {
-            bool sw = true;
-            for (int i = 0; (i < personsList.Count) && (sw == true); i++)
+            bool condition = true;
+            for (int i = 0; (i < personsList.Count) && (condition == true); i++)
                 if (personsList.ElementAt(i).CompareWith(person))
                 {
-                    sw = false;
+                    condition = false;
                 }
-            if (sw == true)
+            if (condition == true)
             {
                 personsList.Add(person);
+                return true;
             }
             else
             {
-                throw new Exception("Person exist already!");
+                return false;
             }
         }
         public int Count()
@@ -42,7 +43,7 @@ namespace Problem01
             }
             else
             {
-                throw new Exception("Element does not exist!");
+                return null;
             }
         }
 

@@ -12,9 +12,9 @@ namespace Problem02
         public static void Main(string[] args)
         {
             computePI = new ComputePI();
-            System.Console.WriteLine("[ComputePI]: " + computePI.pi.ToString());
-            System.Console.WriteLine("[Math.PI]:   " + Math.PI.ToString());
-            System.Console.WriteLine("Difference between two values is " + Math.Abs(computePI.pi - Math.PI));
+            System.Console.WriteLine("[ComputePi]: {0}", computePI.pi.ToString());
+            System.Console.WriteLine("[Math.PI]:   {0}", Math.PI.ToString());
+            System.Console.WriteLine("The difference is {0} decimal places", ComparePI.Compare(computePI.pi).ToString());
         }
     }
 }

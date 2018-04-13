@@ -21,19 +21,21 @@ namespace Problem06
             
             if(numberOfConnection < connectionList.Length)
             {
-                connectionList[numberOfConnection++] = new CreateConnection(id);
+                connectionList[numberOfConnection++] = new Connection(id);
                 return connectionList[numberOfConnection - 1];
             }
             else
             {
-                throw new Exception("The List of Connection is full!!");
+                return null;
             }
             
         }
-        private class CreateConnection : Connection
+        public class Connection
         {
-            public CreateConnection(int id) : base(id)
+            public int Id { get; private set; }
+            internal Connection(int id)
             {
+                Id = id;
             }
         }
     }

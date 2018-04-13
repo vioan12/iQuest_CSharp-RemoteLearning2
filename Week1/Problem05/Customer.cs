@@ -6,24 +6,22 @@ using System.Threading.Tasks;
 
 namespace Problem05
 {
-    public class Customer : Subject, IObserver
+    public class Customer
     {
-        public string firstName { get; private set; }
-        public string lastName { get; private set; }
-        public string phoneNumber { get; private set; }
-        public string emailAddress { get; private set; }
-        public List<Domain> ownedDomains { get; private set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
+        public string PhoneNumber { get; private set; }
+        public string EmailAddress { get; private set; }
         public Customer(string firstName, string lastName, string phoneNumber, string emailAddress)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.phoneNumber = phoneNumber;
-            this.emailAddress = emailAddress;
-            ownedDomains = new List<Domain>();
+            FirstName = firstName;
+            LastName = lastName;
+            PhoneNumber = phoneNumber;
+            EmailAddress = emailAddress;
         }
-        public void Update(Domain domain)
+        public bool WantANewDomain(string name, string hosts, IReseller reseller)
         {
-            ownedDomains.Add(domain);
+            return reseller.CreateNewDomain(name, hosts, FirstName + " " + LastName + " email:" + EmailAddress);
         }
     }
 }

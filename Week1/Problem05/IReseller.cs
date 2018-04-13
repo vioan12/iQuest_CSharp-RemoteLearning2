@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week1
+namespace Problem05
 {
-    class Program
+    public interface IReseller
     {
-        static void Main(string[] args)
-        {
-        }
+        bool CreateNewDomain(string name, string hosts, string ownerDetails);
     }
 }

@@ -13,13 +13,13 @@ namespace Problem04
         {
             Hotel = hotel;
         }
-        public Reservation CreateReservation(string checkInDate)
+        public Reservation CreateReservation(DateTime checkInDate)
         {
             Reservation reservation = new Reservation(Hotel);
             reservation.CheckInDate = checkInDate;
             return reservation;
         }
-        public bool EndingReservation(Reservation reservation, string checkOutDate)
+        public bool EndingReservation(Reservation reservation, DateTime checkOutDate)
         {
             reservation.CheckOutDate = checkOutDate;
             return true;

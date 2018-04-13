@@ -8,14 +8,14 @@ namespace Problem04
 {
     public class Reservation
     {
-        public string CheckInDate { get; internal set; }
-        public string CheckOutDate { get; internal set; }
+        public DateTime CheckInDate { get; internal set; }
+        public DateTime CheckOutDate { get; internal set; }
         public Hotel Hotel { get; private set; }
         public Reservation(Hotel hotel)
         {
             Hotel = hotel;
-            CheckInDate = "";
-            CheckOutDate = "";
+            CheckInDate = default(DateTime);
+            CheckOutDate = default(DateTime);
         }
     }
 }

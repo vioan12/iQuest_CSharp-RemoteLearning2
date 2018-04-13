@@ -25,8 +25,15 @@ namespace Problem01
                     stack[numberOfItems++] = item;
                     return true;
                 }
+                else
+                {
+                    return false;
+                }
             }
-            return false;
+            else
+            {
+                throw new Exception("The stack was disposed");
+            }
         }
         public bool Remove()
         {
@@ -37,13 +44,27 @@ namespace Problem01
                     stack[--numberOfItems] = null;
                     return true;
                 }
+                else
+                {
+                    return false;
+                }
             }
-            return false;
+            else
+            {
+                throw new Exception("The stack was disposed");
+            }
         }
         public void Dispose()
         {
-            Dispose(true);
-            GC.SuppressFinalize(this);
+            if (numberOfItems == 0)
+            {
+                Dispose(true);
+                GC.SuppressFinalize(this);
+            }
+            else
+            {
+                throw new Exception("The stack still contains elements");
+            }
         }
         protected virtual void Dispose(bool disposing)
         {

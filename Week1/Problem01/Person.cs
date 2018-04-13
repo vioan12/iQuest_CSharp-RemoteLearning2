@@ -8,28 +8,32 @@ namespace Problem01
 {
     public class Person
     {
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string dateOfBirth { get; set; }
-        public string dateOfDead { get; set; }
-        public Person()
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
+        public string DateOfBirth { get; private set; }
+        public string DateOfDead { get; private set; }
+        public Person(string firstName, string lastName, string dateOfBirth, string dateOfDead)
         {
+            FirstName = firstName;
+            LastName = lastName;
+            DateOfBirth = dateOfBirth;
+            DateOfDead = dateOfDead;
         }
         public bool CompareWith(Person person)
         {
-            if (firstName != person.firstName)
+            if (FirstName != person.FirstName)
             {
                 return false;
             }
-            if (lastName != person.lastName)
+            if (LastName != person.LastName)
             {
                 return false;
             }
-            if (dateOfBirth != person.dateOfBirth)
+            if (DateOfBirth != person.DateOfBirth)
             {
                 return false;
             }
-            if (dateOfDead != person.dateOfDead)
+            if (DateOfDead != person.DateOfDead)
             {
                 return false;
             }
