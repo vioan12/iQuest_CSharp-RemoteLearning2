@@ -17,7 +17,7 @@ namespace ProblemCustomerReservation
         {
             foreach(Customer customer in customersList)
             {
-                if(customer.IsEqualUsername(newCustomer.Username))
+                if(customer.IsEqualId(newCustomer.Id))
                 {
                     return false;
                 }
@@ -25,13 +25,13 @@ namespace ProblemCustomerReservation
             customersList.Add(newCustomer);
             return true;
         }
-        public bool RemoveCustomer(Customer removableCustomer)
+        public bool RemoveCustomer(int id)
         {
             foreach (Customer customer in customersList)
             {
-                if (customer.IsEqualUsername(removableCustomer.Username))
+                if (customer.IsEqualId(id))
                 {
-                    customersList.Remove(removableCustomer);
+                    customersList.Remove(customer);
                     return true;
                 }
             }
@@ -64,22 +64,22 @@ namespace ProblemCustomerReservation
             }
             return customersListFindByName;
         }
-        public List<Reservation> GetCustomerRezervations(string customerUsername)
+        public List<Reservation> GetCustomerRezervations(int id)
         {
             foreach (Customer customer in customersList)
             {
-                if (customer.IsEqualUsername(customerUsername))
+                if (customer.IsEqualId(id))
                 {
                     return customer.ReservationsList;
                 }
             }
             return null;
         }
-        public Customer FindByUsername(string customerUsername)
+        public Customer FindById(int id)
         {
             foreach (Customer customer in customersList)
             {
-                if (customer.IsEqualUsername(customerUsername))
+                if (customer.IsEqualId(id))
                 {
                     return customer;
                 }

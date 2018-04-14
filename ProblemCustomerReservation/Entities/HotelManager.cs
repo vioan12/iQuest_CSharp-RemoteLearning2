@@ -13,9 +13,9 @@ namespace ProblemCustomerReservation
         {
             Hotel = hotel;
         }
-        public Reservation CreateReservation(DateTime checkInDate)
+        public Reservation CreateReservation(int reservationId, int customerId, DateTime checkInDate)
         {
-            Reservation reservation = new Reservation(Hotel);
+            Reservation reservation = new Reservation(reservationId, customerId, Hotel);
             reservation.CheckInDate = checkInDate;
             return reservation;
         }

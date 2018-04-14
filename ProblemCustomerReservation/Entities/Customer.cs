@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace ProblemCustomerReservation
 {
-    public class Customer
+    public class Customer : IEntity
     {
+        public int Id { get; private set; }
         public string Name { get; private set; }
-        public string Username { get; private set; }
         public string Password { get; private set; }
         public string Address { get; private set; }
         public List<Reservation> ReservationsList { get; private set; }
-        public Customer(string name, string username, string password, string address)
+        public Customer(int id, string name, string password, string address)
         {
+            Id = id;
             Name = name;
-            Username = username;
             Password = password;
             Address = address;
             ReservationsList = new List<Reservation>();
         }
-        public bool IsEqualUsername(string username)
+        public bool IsEqualId(int id)
         {
-            if (Username == username)
+            if (Id == id)
             {
                 return true;
             }

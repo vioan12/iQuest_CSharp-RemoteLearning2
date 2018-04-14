@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace ProblemCustomerReservation
 {
-    public class Reservation
+    public class Reservation : IEntity
     {
+        public int Id { get; private set; }
+        public int CustomerId { get; private set; }
         public DateTime CheckInDate { get; internal set; }
         public DateTime CheckOutDate { get; internal set; }
         public Hotel Hotel { get; private set; }
-        public Reservation(Hotel hotel)
+        public Reservation(int reservationId, int customerId, Hotel hotel)
         {
+            Id = reservationId;
+            CustomerId = customerId;
             Hotel = hotel;
             CheckInDate = default(DateTime);
             CheckOutDate = default(DateTime);

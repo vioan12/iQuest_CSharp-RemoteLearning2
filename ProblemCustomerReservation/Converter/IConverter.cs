@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProblemCustomerReservation
 {
-    public class UsernameReservation
+    public interface IConverter<TEntity> where TEntity : class
     {
-        public string Username { get; set; }
-        public Reservation Reservation { get; set; }
+        List<TEntity> Convert(List<string> lines);
+        TEntity ConvertOneLine(string line);
     }
 }

@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProblemCustomerReservation
 {
-    public class Hotel
+    public class Hotel : IEntity
     {
+        public int Id { get; private set; }
         public string HotelName { get; private set; }
         public string City { get; private set; }
-        public Hotel(string hotelName, string city)
+        public Hotel(int hotelId, string hotelName, string city)
         {
+            Id = hotelId;
             HotelName = hotelName;
             City = city;
         }

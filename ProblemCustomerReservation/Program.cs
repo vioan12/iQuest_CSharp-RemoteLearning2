@@ -8,35 +8,16 @@ namespace ProblemCustomerReservation
 {
     public class Program
     {
-        private static CustomersCollection customersCollection;
-        private static IRepository<Customer> customerRepository;
-        private static IRepository<UsernameReservation> reservationRepository;
         public static void Main(string[] args)
         {
-            customersCollection = new CustomersCollection();
-            customerRepository = new CustomerRepository(customersCollection);
-            reservationRepository = new ReservationRepository(customersCollection);
+            IDataSource dataSource;
+            IRepository<Customer> customerRepository;
+            IRepository<Reservation> reservationRepository;
             try
             {
-                List<string> customersFileLines, reservationsFileLines;
-                List<Customer> customersList;
-                List<UsernameReservation> usernameReservationsList;
-                Converter converter = new Converter();
-                IRead readFile;
-                readFile = new ReadFile(Constants.FileNameCustomersDetails);
-                customersFileLines = readFile.Read();
-                readFile = new ReadFile(Constants.FileNameReservationsDetails);
-                reservationsFileLines = readFile.Read();
-                customersList = converter.ConvertCustomersFile(customersFileLines);
-                usernameReservationsList = converter.ConvertReservationsFile(reservationsFileLines);
-                foreach (Customer customer in customersList)
-                {
-                    customerRepository.Add(customer);
-                }
-                foreach (UsernameReservation usernameAndReservation in usernameReservationsList)
-                {
-                    reservationRepository.Add(usernameAndReservation);
-                }
+                dataSource = new FileDataSource();
+                customerRepository = new CustomerRepository(dataSource);
+                reservationRepository = new ReservationRepository(dataSource);
             }
             catch (Exception exception)
             {

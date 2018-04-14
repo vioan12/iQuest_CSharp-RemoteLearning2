@@ -9,11 +9,11 @@ namespace ProblemCustomerReservation
     public interface ICustomersCollection
     {
         bool AddCustomer(Customer newCustomer);
-        bool RemoveCustomer(Customer removableCustomer);
+        bool RemoveCustomer(int id);
         int CountCustomers();
         Customer GetCustomer(int index);
         List<Customer> FindByName(string customerName);
-        List<Reservation> GetCustomerRezervations(string customerUsername);
-        Customer FindByUsername(string customerUsername);
+        List<Reservation> GetCustomerRezervations(int id);
+        Customer FindById(int id);
     }
 }

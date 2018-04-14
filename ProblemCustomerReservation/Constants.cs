@@ -8,8 +8,9 @@ namespace ProblemCustomerReservation
 {
     public static class Constants
     {
-        public const string FileNameCustomersDetails = "Customers.csv";
-        public const string FileNameReservationsDetails = "Reservations.csv";
+        public const string FileNameCustomersDetails = "DataSource/Customers.csv";
+        public const string FileNameReservationsDetails = "DataSource/Reservations.csv";
         public const string Key = "Ioan";
+        public const int DefaultHotelId = 0;
     }
 }
