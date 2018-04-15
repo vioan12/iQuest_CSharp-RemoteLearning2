@@ -11,13 +11,20 @@ namespace ProblemCustomerReservation
         public static void Main(string[] args)
         {
             IDataSource dataSource;
-            IRepository<Customer> customerRepository;
-            IRepository<Reservation> reservationRepository;
+            ICustomerRepository customerRepository;
+            IReservationRepository reservationRepository;
             try
             {
                 dataSource = new FileDataSource();
                 customerRepository = new CustomerRepository(dataSource);
                 reservationRepository = new ReservationRepository(dataSource);
+                reservationRepository.Sort();
+                reservationRepository.DetectAndRemoveOverlaps();
+                DateTime date = default(DateTime);
+                date.AddMonths(04);
+                date.AddYears(2018);
+                date.AddDays(06);
+                date = reservationRepository.ProposeCheckInDate(date);
             }
             catch (Exception exception)
             {

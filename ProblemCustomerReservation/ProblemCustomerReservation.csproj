@@ -51,6 +51,8 @@
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="CustomersCollection.cs" />
+    <Compile Include="Repository\ICustomerRepository.cs" />
+    <Compile Include="Repository\IReservationRepository.cs" />
     <Compile Include="Security\EncryptionDecryption.cs" />
     <Compile Include="Entities\Hotel.cs" />
     <Compile Include="Entities\HotelManager.cs" />
