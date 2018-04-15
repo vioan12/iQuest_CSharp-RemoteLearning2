@@ -24,7 +24,7 @@ namespace ProblemCustomerReservation
                 date.AddMonths(04);
                 date.AddYears(2018);
                 date.AddDays(06);
-                date = reservationRepository.ProposeCheckInDate(date);
+                //date = reservationRepository.ProposeCheckInDate(date);
             }
             catch (Exception exception)
             {
