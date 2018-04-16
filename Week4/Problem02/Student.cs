@@ -9,16 +9,25 @@ namespace Problem02
     public class Student
     {
         public string Name { get; private set; }
-        private List<Course> coursesList { get; set; }
+        private List<HomeworkCourse> homeworkAndCoursesList { get; set; }
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;
         public Student(string name)
         {
             Name = name;
-            coursesList = new List<Course>();
+            homeworkAndCoursesList = new List<HomeworkCourse>();
         }
-        public void SendHomework(Homework homework, Course course)
+        public void CreateHomework(string homeworkContent, Course course)
         {
-            course.SendHomework(homework);
+            Homework homework = new Homework(homeworkContent);
+            HomeworkCourse homeworkCourse = new HomeworkCourse(homework, course);
+            homeworkAndCoursesList.Add(homeworkCourse);
+        }
+        public void SendAllHomework()
+        {
+            foreach (HomeworkCourse homeworkAndCourse in homeworkAndCoursesList)
+            {
+                homeworkAndCourse.Course.SendHomework(homeworkAndCourse.Homework);
+            }
         }
         protected virtual void OnRaiseCustomEvent(CustomEventArgs e)
         {

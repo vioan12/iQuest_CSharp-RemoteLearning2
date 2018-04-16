@@ -46,6 +46,8 @@
     <Compile Include="Course.cs" />
     <Compile Include="CustomEventArgs.cs" />
     <Compile Include="Homework.cs" />
+    <Compile Include="HomeworkCourse.cs" />
+    <Compile Include="IEntity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />

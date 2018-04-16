@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Problem02
 {
-    public class Course
+    public class Course : IEntity
     {
+        public int Id { get; private set; }
         public string Name { get; private set; }
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;
-        public Course(string name)
+        public Course(int id, string name)
         {
+            Id = id;
             Name = name;
         }
         public void SendHomework(Homework homework)
