@@ -38,26 +38,22 @@ namespace ProblemCustomerReservation
             }
             return overlapsReservations;
         }
-        public DateTime ProposeCheckInDate()
+        public IEnumerable<CheckInOutDates> ProposeCheckInDateAndCheckOutDate()
         {
-            Sort();
+            List<CheckInOutDates> checkInOutDatesList = new List<CheckInOutDates>();
+            CheckInOutDates checkInOutDates;
+            DetectAndRemoveOverlaps();
             for (int i = 0; i < Data.Count() - 1; i++)
             {
-
-            }
-            return Data.ElementAt(Data.Count() - 1).CheckOutDate;
-        }
-        public DateTime ProposeCheckOutDate()
-        {
-            Sort();
-            for (int i = 0; i < Data.Count() - 1; i++)
-            {
-                if (Data.ElementAt(i + 1).CheckInDate != Data.ElementAt(i).CheckOutDate)
+                if(Data.ElementAt(i).CheckOutDate != Data.ElementAt(i+1).CheckInDate)
                 {
-
+                    checkInOutDates = new CheckInOutDates(Data.ElementAt(i).CheckOutDate, Data.ElementAt(i + 1).CheckInDate);
+                    checkInOutDatesList.Add(checkInOutDates);
                 }
             }
-            return Data.ElementAt(Data.Count() - 1).CheckOutDate;
+            checkInOutDates = new CheckInOutDates(Data.ElementAt(Data.Count() - 1).CheckOutDate, DateTime.MaxValue);
+            checkInOutDatesList.Add(checkInOutDates);
+            return checkInOutDatesList;
         }
     }
 }

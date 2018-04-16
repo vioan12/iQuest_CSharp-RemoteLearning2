@@ -10,7 +10,6 @@ namespace ProblemCustomerReservation
     {
         void Sort();
         IEnumerable<Reservation> DetectAndRemoveOverlaps();
-        DateTime ProposeCheckInDate();
-        DateTime ProposeCheckOutDate();
+        IEnumerable<CheckInOutDates> ProposeCheckInDateAndCheckOutDate();
     }
 }

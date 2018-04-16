@@ -48,6 +48,7 @@
     <Compile Include="Converter\Converter.cs" />
     <Compile Include="Converter\ConverterReservation.cs" />
     <Compile Include="DataSource\FileDataSource.cs" />
+    <Compile Include="Entities\CheckInOutDates.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="CustomersCollection.cs" />
