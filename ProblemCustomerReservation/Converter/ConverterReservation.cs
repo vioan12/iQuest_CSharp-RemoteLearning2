@@ -22,7 +22,7 @@ namespace ProblemCustomerReservation
             hotelCheckInDate = DateTime.ParseExact(splitLine[4], "dd.MM.yyyy", CultureInfo.InvariantCulture);
             Hotel hotel = new Hotel(Constants.DefaultHotelId, hotelName, hotelCity);
             HotelManager hotelManager = new HotelManager(hotel);
-            entity = hotelManager.CreateReservation(reservationId, customerId, hotelCheckInDate);
+            entity = hotelManager.CreateReservation(customerId, hotelCheckInDate);
             if (splitLine.Length == 6)
             {
                 hotelCheckOutDate = DateTime.ParseExact(splitLine[5], "dd.MM.yyyy", CultureInfo.InvariantCulture);

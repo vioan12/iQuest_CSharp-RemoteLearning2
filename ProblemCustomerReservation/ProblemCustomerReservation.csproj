@@ -76,6 +76,7 @@
     <Compile Include="Customer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataSource\DatabaseDataSource.cs" />
     <Compile Include="DataSource\FileDataSource.cs" />
     <Compile Include="Entities\CheckInOutDates.cs" />
     <Compile Include="Entities\Customer.cs" />

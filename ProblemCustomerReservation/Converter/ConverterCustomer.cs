@@ -13,11 +13,10 @@ namespace ProblemCustomerReservation
             int id;
             string name, password, address;
             splitLine = line.Split(';');
-            id = int.Parse(splitLine[0]);
-            name = splitLine[1];
-            password = splitLine[2];
-            address = splitLine[3];
-            entity = new Customer(id, name, EncryptionDecryption.DecryptPassword(password), address);
+            entity.Id = int.Parse(splitLine[0]);
+            entity.Name = splitLine[1];
+            entity.Password = EncryptionDecryption.DecryptPassword(splitLine[2]);
+            entity.Address = splitLine[3];
             return entity;
         }
     }

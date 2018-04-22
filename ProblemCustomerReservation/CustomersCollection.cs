@@ -64,13 +64,13 @@ namespace ProblemCustomerReservation
             }
             return customersListFindByName;
         }
-        public List<Reservation> GetCustomerRezervations(int id)
+        public ICollection<Reservation> GetCustomerRezervations(int id)
         {
             foreach (Customer customer in customersList)
             {
                 if (customer.IsEqualId(id))
                 {
-                    return customer.ReservationsList;
+                    return customer.Reservation;
                 }
             }
             return null;

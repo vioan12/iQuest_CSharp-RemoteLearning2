@@ -47,11 +47,11 @@ namespace ProblemCustomerReservation
             {
                 if(Data.ElementAt(i).CheckOutDate != Data.ElementAt(i+1).CheckInDate)
                 {
-                    checkInOutDates = new CheckInOutDates(Data.ElementAt(i).CheckOutDate, Data.ElementAt(i + 1).CheckInDate);
+                    checkInOutDates = new CheckInOutDates(Data.ElementAt(i).CheckOutDate.Value, Data.ElementAt(i + 1).CheckInDate);
                     checkInOutDatesList.Add(checkInOutDates);
                 }
             }
-            checkInOutDates = new CheckInOutDates(Data.ElementAt(Data.Count() - 1).CheckOutDate, DateTime.MaxValue);
+            checkInOutDates = new CheckInOutDates(Data.ElementAt(Data.Count() - 1).CheckOutDate.Value, DateTime.MaxValue);
             checkInOutDatesList.Add(checkInOutDates);
             return checkInOutDatesList;
         }

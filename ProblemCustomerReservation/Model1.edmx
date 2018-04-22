@@ -10,8 +10,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FirstName" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="LastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="Reservation">
           <Key>
@@ -22,7 +23,7 @@
           <Property Name="CheckInDate" Type="datetime" Nullable="false" />
           <Property Name="CheckOutDate" Type="datetime" />
         </EntityType>
-        <Association Name="FK__Reservati__Custo__10566F31">
+        <Association Name="FK__Reservati__Custo__1EA48E88">
           <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
           <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -37,7 +38,7 @@
         <EntityContainer Name="HotelReservationsModelStoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Reservati__Custo__10566F31" Association="Self.FK__Reservati__Custo__10566F31">
+          <AssociationSet Name="FK__Reservati__Custo__1EA48E88" Association="Self.FK__Reservati__Custo__1EA48E88">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Reservation" EntitySet="Reservation" />
           </AssociationSet>
@@ -52,9 +53,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Reservation" Relationship="Self.FK__Reservati__Custo__10566F31" FromRole="Customer" ToRole="Reservation" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Reservation" Relationship="Self.FK__Reservati__Custo__1EA48E88" FromRole="Customer" ToRole="Reservation" />
         </EntityType>
         <EntityType Name="Reservation">
           <Key>
@@ -64,9 +66,9 @@
           <Property Name="CustomerId" Type="Int32" Nullable="false" />
           <Property Name="CheckInDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CheckOutDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Customer" Relationship="Self.FK__Reservati__Custo__10566F31" FromRole="Reservation" ToRole="Customer" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK__Reservati__Custo__1EA48E88" FromRole="Reservation" ToRole="Customer" />
         </EntityType>
-        <Association Name="FK__Reservati__Custo__10566F31">
+        <Association Name="FK__Reservati__Custo__1EA48E88">
           <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
           <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -81,7 +83,7 @@
         <EntityContainer Name="HotelReservationsEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customer" EntityType="Self.Customer" />
           <EntitySet Name="Reservation" EntityType="Self.Reservation" />
-          <AssociationSet Name="FK__Reservati__Custo__10566F31" Association="Self.FK__Reservati__Custo__10566F31">
+          <AssociationSet Name="FK__Reservati__Custo__1EA48E88" Association="Self.FK__Reservati__Custo__1EA48E88">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Reservation" EntitySet="Reservation" />
           </AssociationSet>
@@ -96,8 +98,9 @@
             <EntityTypeMapping TypeName="HotelReservationsModel.Customer">
               <MappingFragment StoreEntitySet="Customer">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
