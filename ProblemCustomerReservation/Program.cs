@@ -15,7 +15,8 @@ namespace ProblemCustomerReservation
             IReservationRepository reservationRepository;
             try
             {
-                dataSource = new FileDataSource();
+                HotelReservationsEntities hotelReservationsEntities = new HotelReservationsEntities();
+                dataSource = new DatabaseDataSource(hotelReservationsEntities);
                 customerRepository = new CustomerRepository(dataSource);
                 reservationRepository = new ReservationRepository(dataSource);
                 reservationRepository.Sort();

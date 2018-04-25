@@ -13,7 +13,7 @@ namespace ProblemCustomerReservation
         int CountCustomers();
         Customer GetCustomer(int index);
         List<Customer> FindByName(string customerName);
-        List<Reservation> GetCustomerRezervations(int id);
+        ICollection<Reservation> GetCustomerRezervations(int id);
         Customer FindById(int id);
     }
 }

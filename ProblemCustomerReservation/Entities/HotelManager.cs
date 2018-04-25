@@ -13,10 +13,12 @@ namespace ProblemCustomerReservation
         {
             Hotel = hotel;
         }
-        public Reservation CreateReservation(int reservationId, int customerId, DateTime checkInDate)
+        public Reservation CreateReservation(int customerId, DateTime checkInDate)
         {
-            Reservation reservation = new Reservation(reservationId, customerId, Hotel);
+            Reservation reservation = new Reservation();
+            reservation.CustomerId = customerId;
             reservation.CheckInDate = checkInDate;
+            reservation.Hotel = Hotel;
             return reservation;
         }
         public bool EndingReservation(Reservation reservation, DateTime checkOutDate)
