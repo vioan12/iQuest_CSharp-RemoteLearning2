@@ -10,9 +10,8 @@ namespace ProblemCustomerReservation
     {
         public override Customer ConvertOneLine(string line)
         {
-            int id;
-            string name, password, address;
             splitLine = line.Split(';');
+            entity = new Customer();
             entity.Id = int.Parse(splitLine[0]);
             entity.Name = splitLine[1];
             entity.Password = EncryptionDecryption.DecryptPassword(splitLine[2]);

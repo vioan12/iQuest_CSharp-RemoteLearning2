@@ -1,32 +1,192 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProblemCustomerReservation.CheckInOutDates">
+    <Position X="0.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAEA=</HashCode>
+      <FileName>Entities\CheckInOutDates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProblemCustomerReservation.Constants">
+    <Position X="13.75" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAQAAAAAAAAAQAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProblemCustomerReservation.Converter&lt;TEntity&gt;">
+    <Position X="2" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAIAAAA=</HashCode>
+      <FileName>Converter\Converter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.ConverterCustomer">
+    <Position X="3" Y="17" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Converter\ConverterCustomer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProblemCustomerReservation.ConverterReservation">
+    <Position X="0.75" Y="17" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Converter\ConverterReservation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="ProblemCustomerReservation.Customer">
     <Position X="0.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAgAAEAAAAAQAAABQAAAAAAAACAAAAAgAAAAA=</HashCode>
-      <FileName>Customer.cs</FileName>
+      <HashCode>AAAKAAAAAAAAAAAAEAAAABQAAAAAAAACCAAAAgAAAAA=</HashCode>
+      <FileName>Entities\Customer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.CustomerRepository">
+    <Position X="20.75" Y="10.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\CustomerRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.304" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.DatabaseDataSource">
+    <Position X="4.75" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAgCAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataSource\DatabaseDataSource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.EncryptionDecryption">
+    <Position X="11.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Security\EncryptionDecryption.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ProblemCustomerReservation.CustomersCollection">
-    <Position X="2.75" Y="0.5" Width="2" />
+  <Class Name="ProblemCustomerReservation.FileDataSource">
+    <Position X="1.75" Y="8.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIgAAAAAAAAIQAAAAAAACAIAAAAAAAAAAADAAA=</HashCode>
-      <FileName>CustomersCollection.cs</FileName>
+      <HashCode>CAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>DataSource\FileDataSource.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ProblemCustomerReservation.Hotel">
-    <Position X="5" Y="0.5" Width="1.75" />
+    <Position X="2.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Hotel.cs</FileName>
+      <HashCode>AAACAAEAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Hotel.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.HotelManager">
+    <Position X="2.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Entities\HotelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProblemCustomerReservation.HotelReservationsEntities">
+    <Position X="6.75" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model1.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProblemCustomerReservation.ReadFile">
+    <Position X="2" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Read\ReadFile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.Repository&lt;TEntity&gt;">
+    <Position X="19.25" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAgAAAAABAAAAAAAABAAAgAAAAAAAIA=</HashCode>
+      <FileName>Repository\Repository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ProblemCustomerReservation.Reservation">
-    <Position X="7.25" Y="0.5" Width="2" />
+    <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAEA=</HashCode>
-      <FileName>Reservation.cs</FileName>
+      <HashCode>AAECAEAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAEA=</HashCode>
+      <FileName>Entities\Reservation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.ReservationRepository">
+    <Position X="17.5" Y="10.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAgAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\ReservationRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.59" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.DatabaseDataExport">
+    <Position X="12.5" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAgQAABAAAAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>DataExport\DatabaseDataExport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.FileDataExport">
+    <Position X="9.25" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAIAA=</HashCode>
+      <FileName>DataExport\FileDataExport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProblemCustomerReservation.CustomersWriteFile">
+    <Position X="10.75" Y="14.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Write\CustomersWriteFile.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ProblemCustomerReservation.ReservationsWriteFile">
+    <Position X="7.75" Y="14.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Write\ReservationsWriteFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProblemCustomerReservation.WriteFile&lt;TEntity&gt;">
+    <Position X="9.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAEAAAA=</HashCode>
+      <FileName>Write\WriteFile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ProblemCustomerReservation.IRepository&lt;TEntity&gt;">
+    <Position X="19.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAgAAAAABAAAAAAAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Repository\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProblemCustomerReservation.IReservationRepository">
+    <Position X="16" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAgAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\IReservationRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProblemCustomerReservation.ICustomerRepository">
+    <Position X="21.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\ICustomerRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

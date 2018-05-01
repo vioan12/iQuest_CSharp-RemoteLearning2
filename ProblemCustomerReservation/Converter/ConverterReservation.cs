@@ -12,20 +12,17 @@ namespace ProblemCustomerReservation
         public override Reservation ConvertOneLine(string line)
         {
             int customerId, reservationId;
-            string hotelCity, hotelName;
             DateTime hotelCheckInDate, hotelCheckOutDate;
             splitLine = line.Split(';');
             reservationId = int.Parse(splitLine[0]);
             customerId = int.Parse(splitLine[1]);
-            hotelName = splitLine[2];
-            hotelCity = splitLine[3];
-            hotelCheckInDate = DateTime.ParseExact(splitLine[4], "dd.MM.yyyy", CultureInfo.InvariantCulture);
-            Hotel hotel = new Hotel(Constants.DefaultHotelId, hotelName, hotelCity);
-            HotelManager hotelManager = new HotelManager(hotel);
+            hotelCheckInDate = DateTime.ParseExact(splitLine[2], "dd.MM.yyyy", CultureInfo.InvariantCulture);
+            HotelManager hotelManager = new HotelManager(Constants.Hotel);
             entity = hotelManager.CreateReservation(customerId, hotelCheckInDate);
-            if (splitLine.Length == 6)
+            entity.Id = reservationId;
+            if (splitLine.Length == 4)
             {
-                hotelCheckOutDate = DateTime.ParseExact(splitLine[5], "dd.MM.yyyy", CultureInfo.InvariantCulture);
+                hotelCheckOutDate = DateTime.ParseExact(splitLine[3], "dd.MM.yyyy", CultureInfo.InvariantCulture);
                 hotelManager.EndingReservation(entity, hotelCheckOutDate);
             }
             return entity;

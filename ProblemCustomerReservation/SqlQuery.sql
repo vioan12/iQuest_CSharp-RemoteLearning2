@@ -7,7 +7,7 @@ CREATE TABLE Customer (
     Password 	NVARCHAR(255)	NOT NULL,
 	Address		NVARCHAR(255)	NOT NULL
 );  
-GO  
+GO
 CREATE TABLE Reservation (  
     Id				INT			IDENTITY (1, 1) NOT NULL PRIMARY KEY,  
     CustomerId		INT			NOT NULL FOREIGN KEY REFERENCES Customer(Id),  
@@ -21,8 +21,6 @@ INSERT INTO Customer VALUES
 	(N'Grigore Stoica', N'9dcSqLOACXU=', N'2754 Johnstown Road'),
 	(N'Diaconescu David Alexandru', N'9dcSqLOACXU=', N'535 Richland Avenue'),
 	(N'Mazilescu Lidia', N'0JQPRys4RXw=', N'1212 Johnstown Road');
-
-
 GO
 INSERT INTO Reservation VALUES  
 		(1, '20120918 03:00:00 PM', '20120920 03:00:00 PM'),
