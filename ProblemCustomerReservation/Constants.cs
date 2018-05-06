@@ -11,7 +11,6 @@ namespace ProblemCustomerReservation
         public const string FileNameCustomersDetails = "DataSource/Customers.csv";
         public const string FileNameReservationsDetails = "DataSource/Reservations.csv";
         public const string Key = "Ioan";
-        public const int DefaultHotelId = 0;
         public static readonly Hotel Hotel;
         static Constants()
         {
